@@ -6,3 +6,19 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+# idea
+.idea
+*.iml
+out/
+gen/
+
+# mvn
+**/target/
+**/.mvn/
+**/mvnw*
+
+#macos
+.DS_Store
+logs/
+*.sh
