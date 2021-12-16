@@ -3,13 +3,21 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Maven default annotation processors profile" enabled="true">
+      <profile name="Annotation profile for dj-study-hard" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dj-common" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/dev/maven_repository/org/mapstruct/mapstruct-processor/1.5.0.Beta2/mapstruct-processor-1.5.0.Beta2.jar" />
+          <entry name="$USER_HOME$/dev/maven_repository/org/mapstruct/mapstruct/1.5.0.Beta2/mapstruct-1.5.0.Beta2.jar" />
+          <entry name="$USER_HOME$/dev/maven_repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar" />
+          <entry name="$USER_HOME$/dev/maven_repository/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+        </processorPath>
         <module name="dj-standalone" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dj-common" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
