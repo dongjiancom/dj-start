@@ -6,6 +6,7 @@ import java.util.concurrent.CompletableFuture;
 
 /**
  * @description:
+ *  可参考 廖雪峰： https://www.liaoxuefeng.com/wiki/1252599548343744/1306581182447650
  * @author: Mr.DJ
  * @createTime: 2020-12-23 14:49
  **/

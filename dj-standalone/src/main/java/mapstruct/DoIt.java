@@ -11,9 +11,10 @@ import org.junit.Test;
  * @author: Mr.DJ
  * @createTime: 2021-08-13 15:01
  * <p>
- * https://juejin.cn/post/6931354963406913550
- * https://blog.csdn.net/qq_43489936/article/details/114873921
- * https://zhuanlan.zhihu.com/p/357402881
+ *     官方例子： https://github.com/mapstruct/mapstruct-examples/tree/master/mapstruct-lombok
+ *     https://juejin.cn/post/6931354963406913550
+ *     https://blog.csdn.net/qq_43489936/article/details/114873921
+ *     https://zhuanlan.zhihu.com/p/357402881
  * <p>
  * init一个Convert
  * default: 这是默认的情况，mapstruct不使用任何组件类型, 可以通过Mappers.getMapper(Class)方式获取自动生成的实例对象。
