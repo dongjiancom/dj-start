@@ -21,4 +21,3 @@ gen/
 #macos
 .DS_Store
 logs/
-*.sh
