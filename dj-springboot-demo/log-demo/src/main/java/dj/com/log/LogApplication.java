@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author: Mr.DJ
  * @createTime: 2022-05-31 15:42
  **/
-@SpringBootApplication(scanBasePackages = {"dj.com.log"})
+@SpringBootApplication
 public class LogApplication {
     public static void main(String[] args) {
         SpringApplication.run(LogApplication.class, args);
