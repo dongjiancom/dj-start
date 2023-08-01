@@ -3,6 +3,7 @@ package thread;
 
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @description:
@@ -23,13 +24,18 @@ public class A1CompletableFuture {
             e.printStackTrace();
             return null;
         });
+
+        /**
+         * 以上方法都为异步
+         * 不会阻塞
+         */
         // 主线程不要立刻结束，否则CompletableFuture默认使用的线程池会立刻关闭:
-        Thread.sleep(200);
+//        TimeUnit.SECONDS.sleep(2);
     }
 
     static Double fetchPrice() {
         try {
-            Thread.sleep(100);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
         }
         if (Math.random() < 0.3) {

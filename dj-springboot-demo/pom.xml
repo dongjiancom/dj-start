@@ -15,12 +15,27 @@
     <modules>
         <module>log-demo</module>
         <module>mybatis-demo</module>
+        <module>mybatis-plus-demo</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <!--normal-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!--spring boot-->
+        <spring.boot.version>2.4.1</spring.boot.version>
+        <projectlombok.version>1.18.20</projectlombok.version>
+        <!--test-->
+        <junit.version>4.12</junit.version>
+        <mybatis.version>2.2.2</mybatis.version>
+        <mybatis.plus.version>3.5.2</mybatis.plus.version>
+        <druid.starter.version>1.2.9</druid.starter.version>
+        <maven.version>3.8.1</maven.version>
+
     </properties>
+
 
     <dependencyManagement>
         <dependencies>
@@ -36,6 +51,19 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${projectlombok.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
             </dependency>
 
         </dependencies>

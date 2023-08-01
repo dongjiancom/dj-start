@@ -1,9 +1,13 @@
 package thread;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @description:
+ *      异步执行：supplyAsync
+ *      串行执行：thenApplyAsync
+ *
  * @author: Mr.DJ
  * @createTime: 2020-12-23 14:49
  **/
@@ -23,13 +27,17 @@ public class A2CompletableFuture {
         cfFetch.thenAccept((result) -> {
             System.out.println("price: " + result);
         });
+
         // 主线程不要立刻结束，否则CompletableFuture默认使用的线程池会立刻关闭:
-        Thread.sleep(2000);
+        TimeUnit.SECONDS.sleep(3);
     }
 
     static String queryCode(String name) {
+        System.out.println("queryCode - start");
+        int timeout = 1;
+        System.out.println("queryCode - sleep"+ timeout+"s");
         try {
-            Thread.sleep(100);
+            TimeUnit.SECONDS.sleep(timeout);
         } catch (InterruptedException e) {
         }
         System.out.println("queryCode-end");
@@ -37,10 +45,14 @@ public class A2CompletableFuture {
     }
 
     static Double fetchPrice(String code) {
+        System.out.println("fetchPrice - start");
+        int timeout = 1;
+        System.out.println("fetchPrice - sleep"+ timeout+"s");
         try {
-            Thread.sleep(100);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
         }
+        System.out.println("fetchPrice - end");
         return 5 + Math.random() * 20;
     }
 }

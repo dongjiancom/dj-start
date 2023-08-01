@@ -42,6 +42,22 @@ public class TestStreamNew {
         personList.add(new Person("Anni", 8200, 24, "female", "New York"));
         personList.add(new Person("Owen", 9500, 25, "male", "New York"));
     }
+
+    @Test
+    public void forEachTest() {
+        personList.stream().filter(s ->!"Anni".equals(s.getName())).forEach(person ->{
+            person.setName("dj");
+            person.setSalary(999999999);
+        });
+
+        System.out.println(personList.get(0));
+        System.out.println(personList.get(1));
+        System.out.println(personList.get(2));
+        System.out.println(personList.get(3));
+        System.out.println(personList.get(4));
+    }
+
+
     /**
      * Stream的创建
      */
