@@ -1,5 +1,6 @@
 package common;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * @description:
@@ -7,7 +8,19 @@ import lombok.Data;
  * @createTime: 2022-05-20 23:17
  **/
 @Data
+@Accessors(chain = true)
 public class DjBean {
     private Integer age;
     private String name;
+
+    public void djAgeChange(final DjBean djBean) {
+        Integer age = djBean.getAge();
+        age++;
+        djBean.setAge(age);
+    }
+
+    public void djAgeChange(final int age) {
+        this.setAge(age);
+    }
 }
+

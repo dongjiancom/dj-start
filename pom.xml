@@ -4,6 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <version>2.4.1</version>
+    </parent>
+
+
     <groupId>dj.com</groupId>
     <artifactId>dj-study-hard</artifactId>
     <packaging>pom</packaging>
@@ -23,7 +30,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <!--spring boot-->
-        <spring.boot.version>2.3.7</spring.boot.version>
+        <spring.boot.version>2.4.1</spring.boot.version>
 
         <!--test-->
         <junit.version>4.12</junit.version>
@@ -36,6 +43,9 @@
         <logstash.encoder.version>7.1.1</logstash.encoder.version>
         <logback.classic.version>1.2.11</logback.classic.version>
         <guava.version>30.1.1-jre</guava.version>
+
+        <hutool-all.version>5.8.18</hutool-all.version>
+        <fastjson.version>1.2.70</fastjson.version>
 
     </properties>
 

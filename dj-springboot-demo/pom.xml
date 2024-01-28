@@ -25,7 +25,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <!--spring boot-->
-        <spring.boot.version>2.4.1</spring.boot.version>
         <projectlombok.version>1.18.20</projectlombok.version>
         <!--test-->
         <junit.version>4.12</junit.version>
