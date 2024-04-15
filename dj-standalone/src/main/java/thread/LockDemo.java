@@ -59,10 +59,48 @@ public class LockDemo {
         }
     }
 
+    @SneakyThrows
+    public void add_lock_tryLock(int n) {
+        if (lock.tryLock()) {
+            try {
+                count += n;
+                TimeUnit.SECONDS.sleep(10l);
+            } finally {
+                lock.unlock();
+            }
+        }
+    }
 
-
-
+    @SneakyThrows
     public static void main(String[] args) {
+        LockDemo lockDemo = new LockDemo();
+
+        Thread t1 = new Thread(() -> {
+            lockDemo.lock.lock();
+            System.out.println("t1 lock success");
+            try {
+                TimeUnit.SECONDS.sleep(10l);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        t1.start();
+
+
+        Thread t2 = new Thread(() -> {
+            lockDemo.lock.lock();
+            System.out.println("t2 lock success");
+            try {
+                TimeUnit.SECONDS.sleep(10l);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        t2.start();
 
     }
+
+
+
+
 }
