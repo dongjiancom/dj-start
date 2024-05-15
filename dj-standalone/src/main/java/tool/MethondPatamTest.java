@@ -7,13 +7,14 @@ import common.DjBean;
  */
 public class MethondPatamTest {
     public static void main(String[] args) {
-//        DjBean dj = new DjBean().setAge(18).setName("dj");
-//        dj.djAgeChange(dj);
-//        System.out.println(dj);
-
         DjBean dj = new DjBean().setAge(18).setName("dj");
-        dj.djAgeChange(19);
+        dj.djAgeChange(dj);
         System.out.println(dj);
+
+
+//        DjBean dj = new DjBean().setAge(18).setName("dj");
+//        dj.djAgeChange(19);
+//        System.out.println(dj);
     }
 
 

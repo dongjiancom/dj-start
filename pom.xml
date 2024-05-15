@@ -19,6 +19,7 @@
     <modules>
         <module>dj-standalone</module>
         <module>dj-springboot-demo</module>
+        <module>dj-springboot-demo/spring-valid</module>
     </modules>
 
     <url>https://www.djv5.site</url>

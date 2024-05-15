@@ -19,11 +19,11 @@ public class CreateProject {
 
     public static void main(String[] args) {
         // 项目路径
-        String directoryPath = "/Users/jiandong/Desktop/dj-java-project/";
+        String directoryPath = "/Users/jiandong/Desktop/dj-project/";
         // 项目名称
-        String projectName = "fei-zhou-dj";
+        String projectName = "fei-zhou";
         // 项目模板
-        String projectTemplate = "/Users/jiandong/Desktop/dj-java-project/Template.txt";
+        String projectTemplate = "/Users/dongjian/Desktop/dj-project/Template.txt";
 
         // 解析模板 转为实体
         List<List<String>> module_dir = transferList(projectTemplate);
