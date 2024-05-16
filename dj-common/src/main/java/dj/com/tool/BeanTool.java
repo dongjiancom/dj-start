@@ -11,7 +11,7 @@
  * 注意： 本内容仅限于易生支付有限公司内部使用，禁止转发
  ******************************************************************************/
 
-package tool;
+package dj.com.tool;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.ArrayUtil;

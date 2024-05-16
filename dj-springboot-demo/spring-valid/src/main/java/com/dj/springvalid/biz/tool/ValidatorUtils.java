@@ -1,4 +1,4 @@
-package com.dj.springvalid.biz;
+package com.dj.springvalid.biz.tool;
 
 import org.hibernate.validator.HibernateValidator;
 

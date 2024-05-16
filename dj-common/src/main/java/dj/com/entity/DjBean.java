@@ -1,4 +1,4 @@
-package common;
+package dj.com.entity;
 import lombok.Data;
 import lombok.experimental.Accessors;
 

@@ -1,6 +1,7 @@
-package tool;
+package dj.com.tool;
 
-import common.DjBean;
+
+import dj.com.entity.DjBean;
 
 /**
  * @author jiandong 2023-08-19 create

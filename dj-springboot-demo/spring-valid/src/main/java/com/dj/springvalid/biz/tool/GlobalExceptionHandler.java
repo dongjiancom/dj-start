@@ -1,4 +1,4 @@
-package com.dj.springvalid.biz;
+package com.dj.springvalid.biz.tool;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

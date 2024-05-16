@@ -2,8 +2,10 @@ package com.dj.springvalid.biz;
 
 import com.dj.springvalid.biz.entity.DjVo;
 import com.dj.springvalid.biz.group.GroupDj;
+import com.dj.springvalid.biz.group.GroupDj2;
 import com.dj.springvalid.biz.group.GroupInsert;
 import com.dj.springvalid.biz.group.GroupWeiXin;
+import com.dj.springvalid.biz.tool.ValidatorUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -44,6 +46,12 @@ public class DjController {
         if("dj".equals(djVo.getName())){
             ValidatorUtils.validateEntity(djVo, GroupDj.class);
         }
+        return "success";
+    }
+
+    @PostMapping("/validCustom")
+    @ResponseBody
+    public String validCustom(@RequestBody @Validated({GroupDj2.class}) DjVo djVo) {
         return "success";
     }
 

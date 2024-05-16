@@ -24,18 +24,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
-        <!--spring boot-->
-        <projectlombok.version>1.18.20</projectlombok.version>
-        <!--test-->
-        <junit.version>4.12</junit.version>
-        <mybatis.version>2.2.2</mybatis.version>
-        <mybatis.plus.version>3.5.2</mybatis.plus.version>
-        <druid.starter.version>1.2.9</druid.starter.version>
-        <maven.version>3.8.1</maven.version>
-        <hutool-all.version>5.8.20</hutool-all.version>
-        <fastjson.version>1.2.70</fastjson.version>
-
     </properties>
 
 

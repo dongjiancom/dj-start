@@ -1,7 +1,6 @@
-package tool;
+package dj.com.tool;
 
 import lombok.SneakyThrows;
-import common.DjBean;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
@@ -24,7 +23,7 @@ public class DevlopTool {
 
     @SneakyThrows
     public static void method() {
-        Class c = Class.forName(DjBean.class.getName());
+        Class c = Class.forName(Object.class.getName());
         Method[] method = c.getDeclaredMethods();
         for(Method m : method){
             if(m.getName().startsWith("set")){
@@ -34,7 +33,7 @@ public class DevlopTool {
     }
 
     public static void fields() {
-        DjBean dj = new DjBean();
+        Object dj = new Object();
         Field[] fields = dj.getClass().getDeclaredFields();
         for (int i = 0; i < fields.length; i++) {
             //有的字段是用private修饰的 将他设置为可读
