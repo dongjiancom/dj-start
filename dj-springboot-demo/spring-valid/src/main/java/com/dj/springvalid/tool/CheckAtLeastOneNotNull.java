@@ -1,4 +1,4 @@
-package com.dj.springvalid.biz.tool;
+package com.dj.springvalid.tool;
 
 
 import cn.hutool.core.util.StrUtil;

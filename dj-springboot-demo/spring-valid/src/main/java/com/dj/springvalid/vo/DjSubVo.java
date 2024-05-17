@@ -1,8 +1,8 @@
-package com.dj.springvalid.biz.entity;
+package com.dj.springvalid.vo;
 
-import com.dj.springvalid.biz.group.GroupAlipay;
-import com.dj.springvalid.biz.group.GroupInsert;
-import com.dj.springvalid.biz.group.GroupWeiXin;
+import com.dj.springvalid.group.GroupAlipay;
+import com.dj.springvalid.group.GroupInsert;
+import com.dj.springvalid.group.GroupWeiXin;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 

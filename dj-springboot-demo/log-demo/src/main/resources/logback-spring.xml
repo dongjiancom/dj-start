@@ -80,7 +80,7 @@
         <!--               在基于 Unix 操作系统，像 Linux 以及 Mac OS X 系统默认支持 ANSI 颜色代码 -->
         <withJansi>true</withJansi>
         <encoder>
-            <pattern>${SYSTEM_CONSOLE_LOG_PATTERN}</pattern>
+            <pattern>${CONSOLE_LOG_PATTERN_COLOR}</pattern>
             <charset>UTF-8</charset>
         </encoder>
     </appender>
@@ -210,9 +210,9 @@
 
     <!-- 指定日志输出到哪些位置、以及root日志的输出level-->
     <!-- 默认情况下的使用，任何spring profile值情况下都会使用下面的配置，即输出到console中-->
-    <root level="info">
+<!--    <root level="info">-->
 <!--        <appender-ref ref="FILE_ALL"/>-->
-    </root>
+<!--    </root>-->
 
 <!--    &lt;!&ndash; 在SpringBoot中，可以通过springProfile属性来实现在不同环境上执行不同的输出策略，如下示例中指定pro和dev上有不同的策略&ndash;&gt;-->
 <!--    &lt;!&ndash; 指定在prod环境使用的输出配置&ndash;&gt;-->
@@ -224,10 +224,10 @@
 
 <!--    &lt;!&ndash; 指定在dev环境使用的输出配置&ndash;&gt;-->
     <springProfile name="dev">
-        <root level="info">
+        <root level="info" >
             <appender-ref ref="STDOUT"/>
 <!--            <appender-ref ref="CONSOLE"/>-->
-            <appender-ref ref="ASYNC"/>
+<!--            <appender-ref ref="ASYNC"/>-->
             <appender-ref ref="FILE_ERROR"/>
         </root>
     </springProfile>

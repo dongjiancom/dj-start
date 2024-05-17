@@ -1,6 +1,9 @@
 server:
   port: 8080
-
+# dev环境
+spring:
+  profiles:
+    include: dev
 logging:
   level:
     root: info

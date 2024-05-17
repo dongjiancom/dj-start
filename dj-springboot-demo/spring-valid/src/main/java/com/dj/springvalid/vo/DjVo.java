@@ -1,7 +1,7 @@
-package com.dj.springvalid.biz.entity;
+package com.dj.springvalid.vo;
 
-import com.dj.springvalid.biz.group.*;
-import com.dj.springvalid.biz.tool.CheckAtLeastOneNotNull;
+import com.dj.springvalid.group.*;
+import com.dj.springvalid.tool.CheckAtLeastOneNotNull;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 

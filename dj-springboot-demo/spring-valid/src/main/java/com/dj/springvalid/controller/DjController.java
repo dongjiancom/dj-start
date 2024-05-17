@@ -1,11 +1,11 @@
-package com.dj.springvalid.biz;
+package com.dj.springvalid.controller;
 
-import com.dj.springvalid.biz.entity.DjVo;
-import com.dj.springvalid.biz.group.GroupDj;
-import com.dj.springvalid.biz.group.GroupDj2;
-import com.dj.springvalid.biz.group.GroupInsert;
-import com.dj.springvalid.biz.group.GroupWeiXin;
-import com.dj.springvalid.biz.tool.ValidatorUtils;
+import com.dj.springvalid.group.GroupDj;
+import com.dj.springvalid.group.GroupDj2;
+import com.dj.springvalid.group.GroupInsert;
+import com.dj.springvalid.group.GroupWeiXin;
+import com.dj.springvalid.tool.ValidatorUtils;
+import com.dj.springvalid.vo.DjVo;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

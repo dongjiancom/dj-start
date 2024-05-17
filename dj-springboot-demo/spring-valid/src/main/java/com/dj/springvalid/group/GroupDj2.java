@@ -1,9 +1,9 @@
-package com.dj.springvalid.biz.group;
+package com.dj.springvalid.group;
 
 import javax.validation.groups.Default;
 
 /**
  * @author jiandong 2024-05-16 create
  */
-public interface GroupDj extends Default {
+public interface GroupDj2 extends Default {
 }
