@@ -1,7 +1,10 @@
 package com.dj.springvalid.tool;
 
 
+import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import dj.com.tool.BeanTool;
 
 import javax.validation.Constraint;
@@ -46,19 +49,20 @@ public @interface CheckAtLeastOneNotNull {
 
         @Override
         public boolean isValid(Object object, ConstraintValidatorContext constraintContext) {
-
             if (object == null) {
                 return true;
             }
             try {
+                boolean flag = true;
                 for (String fieldName : fieldNames) {
-                    // 通过反射获取属性值
-                    Object fieldValue = BeanTool.getFieldObjByName(object, fieldName);
-                    if (!StrUtil.isBlankIfStr(fieldValue)) {
-                        return true;
+                    JSONObject jsonObject = (JSONObject) JSON.toJSON(object);
+                    Object fieldValue = jsonObject.get(fieldName);
+                    if (ObjectUtil.isNull(fieldValue)) {
+                        flag = false;
+                        break;
                     }
                 }
-                return false;
+                return flag;
             } catch (Exception e) {
                 return false;
             }
