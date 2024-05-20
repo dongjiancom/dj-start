@@ -26,6 +26,10 @@ public class Optional8 {
         DjBean dj = new DjBean();
         dj.setAge(19);
 
+        /*
+            条件：dj = null;
+            结果：Optional.ofNullable(dj)不会报错，Optional.of(dj)会报错
+         */
 //        dj = null;
 
 //        dj = new Dj();
