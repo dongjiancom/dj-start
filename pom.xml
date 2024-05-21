@@ -53,7 +53,11 @@
         <hutool-all.version>5.8.20</hutool-all.version>
         <fastjson.version>1.2.70</fastjson.version>
         <mybatis.version>2.2.2</mybatis.version>
-        <mybatis.plus.version>3.5.2</mybatis.plus.version>
+        <mybatis.plus.version>3.5.6</mybatis.plus.version>
+        <mybatis-plus-generator.version>3.5.6</mybatis-plus-generator.version>
+        <mybatis-plus-annotation.version>3.5.4</mybatis-plus-annotation.version>
+        <velocity-engine-core.version>2.3</velocity-engine-core.version>
+        <version>2.3</version>
 <!--        <spring-boot-autoconfigure.version>3.1.7</spring-boot-autoconfigure.version>-->
 
     </properties>

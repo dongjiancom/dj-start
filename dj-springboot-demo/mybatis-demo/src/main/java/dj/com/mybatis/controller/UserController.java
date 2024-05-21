@@ -21,7 +21,6 @@ public class UserController {
 
     @GetMapping("/user/{id}")
     public User getUserById(@PathVariable("id") Long id) {
-        System.out.println(1);
         return userDao.selectByPrimaryKey(id);
     }
 }
