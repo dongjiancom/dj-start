@@ -1,7 +1,7 @@
 server:
   port: 8080
-
 mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
   global-config:
     #0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
     id-type: 0
@@ -13,15 +13,19 @@ mybatis-plus:
     refresh-mapper: true
     #数据库大写下划线转换
     #capital-mode: true
+    # 逻辑删除配置
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: true
-    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
-#  type-aliases-package: com.easypay.tianlu.pp.infrastructure.persistence.entity
-#  mapper-locations: classpath*:com/easypay/tianlu/pp/infrastructure/persistence/config/*Mapper.xml
-#  enable-pagination: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 spring:
+  profiles:
+    active: dev
   application:
     name: web-mybatis-plus
   datasource:
