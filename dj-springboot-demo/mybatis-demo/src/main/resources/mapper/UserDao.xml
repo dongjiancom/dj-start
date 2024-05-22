@@ -91,7 +91,7 @@
         name = #{name,jdbcType=VARCHAR}
         AND email = #{email,jdbcType=VARCHAR}
     </select>
-    <select id="selectAll" resultType="dj.com.mybatis.entity.User">
+    <select id="selectAll" resultType="dj.com.mybatis.entity.User" fetchSize="10">
         select
         <include refid="Base_Column_List"/>
         from user

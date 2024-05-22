@@ -41,4 +41,6 @@ public interface UserDao {
 
     List<User> queryByNameAndEmail(@Param("name") String name, @Param("email") String email);
 
+    List<User> selectAll();
+
 }
