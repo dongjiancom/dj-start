@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dj.com.mybatisplus.generate.mapper.Dj1Mapper">
+
+    <resultMap id="BaseResultMap" type="dj.com.mybatisplus.generate.entity.Dj1">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <id property="tenantId" column="tenant_id" jdbcType="VARCHAR"/>
+            <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="delFlag" column="del_flag" jdbcType="CHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="age" column="age" jdbcType="INTEGER"/>
+            <result property="money" column="money" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="dateOfBirth" column="date_of_birth" jdbcType="TIMESTAMP"/>
+            <result property="append" column="append" jdbcType="OTHER"/>
+            <result property="attach" column="attach" jdbcType="VARCHAR"/>
+            <result property="cardNoEnc" column="card_no_enc" jdbcType="VARCHAR"/>
+            <result property="cardNoMask" column="card_no_mask" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,tenant_id,create_by,
+        create_time,update_by,update_time,
+        del_flag,phone,age,
+        money,name,date_of_birth,
+        append,attach,card_no_enc,
+        card_no_mask
+    </sql>
+</mapper>
