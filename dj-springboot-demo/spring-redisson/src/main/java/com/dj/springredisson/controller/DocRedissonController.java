@@ -15,6 +15,8 @@ import javax.annotation.Resource;
 /**
  * @author jiandong 2024-06-05 create
  * 参考：https://blog.csdn.net/Ascend1977/article/details/131126047
+ * 配置参考：https://springdoc.cn/spring-boot-redisson/
+ * github：https://github.com/redisson/redisson/blob/master/redisson-spring-boot-starter/README.md
  */
 @RestController
 @Slf4j
