@@ -1,4 +1,4 @@
-package com.dj.springredisson.tool;
+package com.dj.springredisson.tool2;
 
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
@@ -47,6 +47,20 @@ public class RedissonSpringTool {
             log.error("pp releaseLock exception:", e);
         }
         log.info("pp releaseLock lockKey:{}", lockKey);
+    }
+
+    /**
+     * 不解锁
+     */
+    public boolean lockForever(String lockKey){
+        RLock lock = redissonClient.getLock(lockKey);
+        boolean isLock = false;
+        try {
+            isLock = lock.tryLock(5, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            log.error("pp waitLock exception:", e);
+        }
+        return isLock;
     }
 
 }

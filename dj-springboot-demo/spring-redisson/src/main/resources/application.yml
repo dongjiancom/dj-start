@@ -1,0 +1,19 @@
+#spring:
+#  redis:
+#    redisson:
+#      file: classpath:redisson.yaml
+
+spring:
+  redis:
+    # 数据库
+    database: 1
+    # 主机
+    host: 47.103.50.102
+    # 端口
+    port: 6379
+    # 密码
+    password: jiayou123
+    # 读超时
+    timeout: 5s
+    # 连接超时
+    connect-timeout: 5s
