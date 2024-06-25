@@ -16,7 +16,10 @@
         <module>log-demo</module>
         <module>mybatis-demo</module>
         <module>mybatis-plus-demo</module>
+        <module>spring-async</module>
         <module>spring-event</module>
+        <module>spring-redisson</module>
+        <module>spring-valid</module>
     </modules>
 
     <properties>
