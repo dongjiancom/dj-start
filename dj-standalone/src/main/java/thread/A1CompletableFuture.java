@@ -2,6 +2,8 @@ package thread;
 
 
 
+import cn.hutool.core.thread.ThreadUtil;
+
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
@@ -33,7 +35,9 @@ public class A1CompletableFuture {
          * 不会阻塞
          */
         // 主线程不要立刻结束，否则CompletableFuture默认使用的线程池会立刻关闭:
-//        TimeUnit.SECONDS.sleep(2);
+        // 主线程等待
+        ThreadUtil.getMainThread().join();
+        System.out.println("main thread over");
     }
 
     static Double fetchPrice() {

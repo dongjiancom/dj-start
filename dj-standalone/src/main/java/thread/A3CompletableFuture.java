@@ -84,6 +84,8 @@ public class A3CompletableFuture {
         // 主线程不要立刻结束，否则CompletableFuture默认使用的线程池会立刻关闭:
 //        TimeUnit.SECONDS.sleep(10);
 
+        System.out.println("主线程结束");
+
     }
 
     static String queryCode(String name, String url) {
