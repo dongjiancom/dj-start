@@ -12,6 +12,9 @@ import java.util.concurrent.TimeUnit;
  * @createTime: 2020-12-23 14:49
  **/
 public class A1CompletableFuture {
+    /**
+     * 异步、不阻塞的方法
+     */
     public static void main(String[] args) throws Exception {
         // 创建异步执行任务:
         CompletableFuture<Double> cf = CompletableFuture.supplyAsync(A1CompletableFuture::fetchPrice);

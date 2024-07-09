@@ -82,7 +82,7 @@ public class A3CompletableFuture {
             System.out.println("price 二选一: " + doubles);
         });
         // 主线程不要立刻结束，否则CompletableFuture默认使用的线程池会立刻关闭:
-        TimeUnit.SECONDS.sleep(10);
+//        TimeUnit.SECONDS.sleep(10);
 
     }
 
