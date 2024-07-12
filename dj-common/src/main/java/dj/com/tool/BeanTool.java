@@ -14,12 +14,15 @@
 package dj.com.tool;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import lombok.SneakyThrows;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
@@ -30,10 +33,7 @@ import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @description:
@@ -314,4 +314,39 @@ public class BeanTool {
         }
         return null;
     }
+
+    /**
+     * 转换list
+     */
+    @SneakyThrows
+    public static <S, T> List<T> convertList(List<S> sources, Class<T> outputClass) {
+        if (null == sources || CollectionUtil.isEmpty(sources)) {
+            return null;
+        }
+        List<T> list = new ArrayList<>(sources.size());
+        for (S s : sources) {
+            T t = outputClass.newInstance();
+            copyProperties(s, t);
+            list.add(t);
+        }
+        return list;
+    }
+
+    /**
+     * 转换list；用fastJson实现
+     */
+    public static <S, T> List<T> convertListByJson(List<S> sources, Class<T> outputClass) {
+        if (null == sources || CollectionUtil.isEmpty(sources)) {
+            return null;
+        }
+        return JSONArray.parseArray(JSONArray.toJSONString(sources), outputClass);
+    }
+
+    /**
+     * fastjson 序列化、反序列化。完成转换
+     */
+    public static <T> T convertObj(Object source, Class<T> outputClass){
+        return JSON.parseObject(JSON.toJSONString(source), outputClass);
+    }
+
 }
