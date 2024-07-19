@@ -20,6 +20,8 @@
         <module>spring-event</module>
         <module>spring-redisson</module>
         <module>spring-valid</module>
+        <module>alibaba-ttl</module>
+        <module>java21-virtual</module>
     </modules>
 
     <properties>
