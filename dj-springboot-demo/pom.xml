@@ -109,6 +109,12 @@
                 <version>${redisson-spring-boot-starter.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>dj.com</groupId>
+                <artifactId>dj-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
