@@ -1,6 +1,5 @@
 
-
-package dj.com.log.tool;
+package dj.com.log;
 
 /**
  * @author jiandong

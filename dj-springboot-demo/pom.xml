@@ -20,6 +20,7 @@
         <module>spring-event</module>
         <module>spring-redisson</module>
         <module>spring-valid</module>
+        <module>spring-statemachine</module>
     </modules>
 
     <properties>
