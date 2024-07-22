@@ -25,6 +25,10 @@
             <version>${transmittable-thread-local.version}</version>
         </dependency>
         <dependency>
+            <groupId>dj.com</groupId>
+            <artifactId>dj-common</artifactId>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
