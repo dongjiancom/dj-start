@@ -4,6 +4,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -19,11 +20,14 @@ public class _3ApplicationRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println("初始化操作" + "3. 实现 ApplicationRunner，读到环境变量" + args);
-        Optional<Integer> port = args.getOptionValues("server-port").stream()
-                .map(Integer::parseInt)
-                .findFirst();
-        if (port.isPresent()) {
-            // 根据端口号进行特定的初始化操作
+        List<String> serverPortOptions = args.getOptionValues("server-port");
+        if (serverPortOptions != null && !serverPortOptions.isEmpty()) {
+            Optional<Integer> port = args.getOptionValues("server-port").stream()
+                    .map(Integer::parseInt)
+                    .findFirst();
+            if (port.isPresent()) {
+                // 根据端口号进行特定的初始化操作
+            }
         }
     }
 }

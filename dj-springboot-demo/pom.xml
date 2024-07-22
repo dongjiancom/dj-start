@@ -23,6 +23,7 @@
         <module>alibaba-ttl</module>
         <module>java21-virtual</module>
         <module>spring-statemachine</module>
+        <module>spring-wxJava</module>
     </modules>
 
     <properties>
@@ -35,6 +36,22 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-test</artifactId>
+                <version>${spring.boot.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>org.junit.jupiter</groupId>-->
+<!--                <artifactId>junit-jupiter</artifactId>-->
+<!--                <version>${junit-jupiter.version}</version>-->
+<!--                <scope>test</scope>-->
+<!--            </dependency>-->
+
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>

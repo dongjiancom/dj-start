@@ -63,10 +63,13 @@ public class DevlopTool {
 
         while (start.compareTo(end) <= 0) {
             int w = start.get(Calendar.DAY_OF_WEEK);
-            if (w == Calendar.SUNDAY)
+            if (w == Calendar.SUNDAY){
                 sumSunday++;
-            if (w == Calendar.SATURDAY)
+            }
+            if (w == Calendar.SATURDAY){
+
                 sumSunday++;
+            }
             //打印每天
             System.out.println(format.format(start.getTime()));
             //循环，每次天数加1
