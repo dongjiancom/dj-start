@@ -58,6 +58,7 @@
         <mybatis-plus-annotation.version>3.5.4</mybatis-plus-annotation.version>
         <velocity-engine-core.version>2.3</velocity-engine-core.version>
         <redisson-spring-boot-starter.version>3.18.0</redisson-spring-boot-starter.version>
+        <aspectjweaver.version>1.9.22</aspectjweaver.version>
 <!--        <spring-boot-autoconfigure.version>3.1.7</spring-boot-autoconfigure.version>-->
 
     </properties>

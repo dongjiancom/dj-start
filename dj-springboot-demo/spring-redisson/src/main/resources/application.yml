@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    include: dev
   redis:
     redisson:
       file: classpath:redisson.yaml
@@ -9,6 +11,9 @@ spring:
         min-idle: 0
         max-wait: -1
     timeout: 2000ms
+logging:
+  level:
+    root: info
 #spring:
 #  redis:
 #    # 数据库

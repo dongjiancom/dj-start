@@ -28,7 +28,12 @@ public class EventController {
     @PostMapping("/userChangePasswordEvent")
     @ResponseBody
     public String userChangePasswordEvent() {
+        // 打印执行时间
+        long startL = System.currentTimeMillis();
+        // 发布事件
         appEventPublisher.publishEvent(new UserChangePasswordEvent("1111111"));
+
+        log.info("发布事件耗时：{}", System.currentTimeMillis() - startL);
         return "success";
     }
 }
