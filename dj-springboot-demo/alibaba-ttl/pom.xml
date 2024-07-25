@@ -15,7 +15,6 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <transmittable-thread-local.version>2.14.4</transmittable-thread-local.version>
     </properties>
 
     <dependencies>
@@ -26,7 +25,7 @@
         </dependency>
         <dependency>
             <groupId>dj.com</groupId>
-            <artifactId>dj-common</artifactId>
+            <artifactId>dj-util</artifactId>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

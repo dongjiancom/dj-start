@@ -14,14 +14,17 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
+
 
         <dependency>
             <groupId>dj.com</groupId>
-            <artifactId>dj-common</artifactId>
+            <artifactId>dj-util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dj.com</groupId>
+            <artifactId>dj-pojo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

@@ -2,8 +2,7 @@ package com.dj.springredisson.controller;
 
 import com.dj.springredisson.service.DLockService;
 import com.dj.springredisson.tool2.RedissonSpringTool;
-import dj.com.entity.DjBean;
-import dj.com.log.LogCostTime;
+import dj.com.pojo.DjBean;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -4,6 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!--  其他跟spring配套的，无需再要填version-->
+
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
@@ -19,7 +21,10 @@
     <modules>
         <module>dj-standalone</module>
         <module>dj-springboot-demo</module>
-        <module>dj-common</module>
+        <module>java21-virtual</module>
+        <module>dj-infrastructure</module>
+        <module>dj-util</module>
+        <module>dj-pojo</module>
     </modules>
 
     <url>https://www.djv5.site</url>
@@ -32,8 +37,10 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <!--spring boot-->
+        <!--dj-util-->
+        <fastjson2.version>2.0.45</fastjson2.version>
         <spring.boot.version>2.4.1</spring.boot.version>
+
 
         <!--test-->
         <junit.version>4.12</junit.version>
@@ -59,6 +66,8 @@
         <velocity-engine-core.version>2.3</velocity-engine-core.version>
         <redisson-spring-boot-starter.version>3.18.0</redisson-spring-boot-starter.version>
         <aspectjweaver.version>1.9.22</aspectjweaver.version>
+
+        <transmittable-thread-local.version>2.14.4</transmittable-thread-local.version>
 <!--        <spring-boot-autoconfigure.version>3.1.7</spring-boot-autoconfigure.version>-->
 
     </properties>

@@ -29,10 +29,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
         <dependency>
@@ -48,7 +45,7 @@
 
         <dependency>
             <groupId>dj.com</groupId>
-            <artifactId>dj-common</artifactId>
+            <artifactId>dj-util</artifactId>
         </dependency>
 
     </dependencies>

@@ -1,12 +1,13 @@
 package dj.com.mybatisplus.generate.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import dj.com.mybatisplus.generate.entity.Dj;
+import dj.com.mybatisplus.generate.entity.Dj1;
 import dj.com.mybatisplus.generate.service.DjService;
-import dj.com.tool.BeanTool;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -69,8 +70,7 @@ public class DjController {
     @PostMapping("/listDj")
     @ResponseBody
     public List<Dj> list(@RequestBody DjQuery djQuery) {
-        Dj dj = new Dj();
-        BeanTool.copyProperties(djQuery, dj);
+        Dj dj = JSON.parseObject(JSON.toJSONString(djQuery), Dj.class);
 
         LambdaQueryWrapper<Dj> queryWrapper = Wrappers.lambdaQuery();
         queryWrapper.setEntity(dj);

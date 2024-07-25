@@ -33,10 +33,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
+
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -45,7 +42,7 @@
 
         <dependency>
             <groupId>dj.com</groupId>
-            <artifactId>dj-common</artifactId>
+            <artifactId>dj-util</artifactId>
         </dependency>
 
     </dependencies>

@@ -1,6 +1,6 @@
 package optional;
 
-import dj.com.entity.DjBean;
+import dj.com.pojo.DjBean;
 import org.junit.Test;
 
 import java.util.Optional;

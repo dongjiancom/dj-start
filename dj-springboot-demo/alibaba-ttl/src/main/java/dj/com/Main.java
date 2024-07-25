@@ -6,6 +6,8 @@ import com.alibaba.ttl.TransmittableThreadLocal;
 import lombok.SneakyThrows;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -25,17 +27,32 @@ public class Main implements Runnable{
      * 1. 简单使用
      *      父线程给子线程传递值。
      */
+//    @SneakyThrows
+//    @Test
+//    public void t1() {
+
     @SneakyThrows
-    @Test
-    public void t1() {
+    public static void main(String[] args) {
+        Console.log("主线程 start");
         // 在父线程中设置
         context.set("value-set-in-parent");
 
-        ExecutorService executorService = ThreadUtil.newExecutor(2);
-        executorService.submit(this);
+        List<Runnable> tasks = new ArrayList<>();
+        for (int i=0;i<2;i++){
+            tasks.add(() -> new Main().run());
+        }
+
+        ExecutorService executorService = ThreadUtil.newExecutor(tasks.size());
+        tasks.stream().forEach(executorService::execute);
+        executorService.shutdown();
 
         // 在子线程中可以读取，值是"value-set-in-parent"
         ThreadUtil.getMainThread().join();
+
+        Console.log("主线程 context.get()=" + context.get());
+        Console.log("主线程 end");
+
+        ThreadUtil.sleep(10000l);
     }
 
     /**
@@ -49,10 +66,13 @@ public class Main implements Runnable{
 
     @Override
     public void run() {
-        Console.log("run - start");
-        System.out.println("run" + ThreadUtil.getMainThread().getId());
-        System.out.println(context.get());
+        Console.log("子线程 run - start");
+        Console.log("子线程 run id = " + ThreadUtil.getMainThread().getId());
+        Console.log("子线程 context.get()=" + context.get());
+
+        Console.log("子线程 context.set(\"dj\")");
+
         ThreadUtil.sleep(1000l);
-        Console.log("run - stop");
+        Console.log("子线程 run - end");
     }
 }
