@@ -4,7 +4,6 @@ import cn.hutool.core.lang.Console;
 import cn.hutool.core.thread.ThreadUtil;
 import com.alibaba.ttl.TransmittableThreadLocal;
 import lombok.SneakyThrows;
-import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +58,6 @@ public class Main implements Runnable{
      * 2.保证线程池中传递值
      *  2.1 修饰Runnable和Callable；使用TtlRunnable和TtlCallable来修饰传入线程池的Runnable和Callable。
      */
-    @Test
     public void t2_1() {
 
     }

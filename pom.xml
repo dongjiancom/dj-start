@@ -22,7 +22,6 @@
         <module>dj-standalone</module>
         <module>dj-springboot-demo</module>
         <module>java21-virtual</module>
-        <module>dj-infrastructure</module>
         <module>dj-util</module>
         <module>dj-pojo</module>
     </modules>
@@ -39,7 +38,7 @@
 
         <!--dj-util-->
         <fastjson2.version>2.0.45</fastjson2.version>
-        <spring.boot.version>2.4.1</spring.boot.version>
+        <spring-boot.version>2.4.1</spring-boot.version>
 
 
         <!--test-->
@@ -55,7 +54,7 @@
         <logback.classic.version>1.2.11</logback.classic.version>
         <guava.version>30.1.1-jre</guava.version>
 
-        <druid.starter.version>1.2.9</druid.starter.version>
+        <druid-spring-boot-starter.version>1.2.9</druid-spring-boot-starter.version>
         <maven.version>3.8.1</maven.version>
         <hutool-all.version>5.8.20</hutool-all.version>
         <fastjson.version>1.2.70</fastjson.version>

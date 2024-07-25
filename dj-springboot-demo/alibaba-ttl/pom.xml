@@ -27,10 +27,7 @@
             <groupId>dj.com</groupId>
             <artifactId>dj-util</artifactId>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
+
     </dependencies>
 
 </project>
