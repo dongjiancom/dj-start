@@ -2,7 +2,6 @@ package dj.com;
 
 import cn.hutool.core.thread.ThreadUtil;
 import lombok.SneakyThrows;
-import org.junit.Test;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -30,7 +29,7 @@ public class Main {
      * 方法一：直接创建虚拟线程并运行
      */
     @SneakyThrows
-    @Test
+
     public void m1(){
         // 传入Runnable实例并立刻运行:
         Thread vt = Thread.startVirtualThread(() -> {
@@ -49,7 +48,6 @@ public class Main {
     /**
      * 方法二：创建虚拟线程但不自动运行，而是手动调用start()开始运行：
      */
-    @Test
     public void m2() throws InterruptedException {
         System.out.println("method start");
         // 创建VirtualThread:
@@ -71,7 +69,7 @@ public class Main {
     /**
      * 方法三：通过虚拟线程的ThreadFactory创建虚拟线程，然后手动调用start()开始运行：
      */
-    @Test
+
     public void m3(){
         System.out.println("method start");
         // 创建ThreadFactory:
@@ -94,7 +92,7 @@ public class Main {
     /**
      * 直接调用start()实际上是由ForkJoinPool的线程来调度的。我们也可以自己创建调度线程，然后运行虚拟线程：
      */
-    @Test
+
     public void m4(){
         System.out.println("method start");
 

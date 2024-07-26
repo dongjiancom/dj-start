@@ -4,7 +4,6 @@ import cn.hutool.core.lang.Console;
 import cn.hutool.core.thread.ThreadUtil;
 import com.alibaba.ttl.TransmittableThreadLocal;
 import lombok.SneakyThrows;
-import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +27,7 @@ public class Main2 {
      *    它与 Thread.ofVirtual().start(task) 是等价的
      */
     @SneakyThrows
-    @Test
+
     public void t1(){
         Console.log("method start");
 
@@ -48,7 +47,7 @@ public class Main2 {
      *          Thread.Builder.OfVirtual 子接口则创建虚拟线程。
      */
     @SneakyThrows
-    @Test
+
     public void t2(){
         Console.log("method start");
 
@@ -66,7 +65,7 @@ public class Main2 {
      *      名称分别是 worker-0 和 worker-1（这个是由 name() 中的两个参数 prefix 和 start 指定的）：
      */
     @SneakyThrows
-    @Test
+
     public void t2_2(){
         Console.log("method start");
 
@@ -92,7 +91,7 @@ public class Main2 {
      *      Executor 允许我们将 线程 管理和创建 与 应用程序 的其余部分分开
      */
     @SneakyThrows
-    @Test
+
     public void t3(){
         Console.log("method start");
 
@@ -116,7 +115,7 @@ public class Main2 {
      *      在有虚拟线程以前，它一个惯常的使用方法如下：
      */
     @SneakyThrows
-    @Test
+
     public void t5_1(){
         Console.log("method start");
 
@@ -146,7 +145,7 @@ public class Main2 {
      *      在有虚拟线程后，其实改动非常少，只需要将平台线程池的 executor 替换为虚拟线程的 executor
      */
     @SneakyThrows
-    @Test
+
     public void t5_2(){
         Console.log("method start");
 

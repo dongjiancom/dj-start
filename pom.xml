@@ -21,7 +21,6 @@
     <modules>
         <module>dj-standalone</module>
         <module>dj-springboot-demo</module>
-        <module>java21-virtual</module>
         <module>dj-util</module>
         <module>dj-pojo</module>
     </modules>
